@@ -1,0 +1,1 @@
+install_git "moonjit-2.2.0" "https://github.com/moonjit/moonjit" 2.2.0 moonjit

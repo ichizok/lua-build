@@ -413,6 +413,14 @@ build_package_luvit() {
   } >&4 2>&1
 }
 
+build_package_moonjit() {
+  { env -u CPPFLAGS -u LDFLAGS "$MAKE" $MAKE_OPTS PREFIX="$PREFIX_PATH"
+    "$MAKE" $MAKE_OPTS install PREFIX="$PREFIX_PATH"
+    cd "${PREFIX_PATH}/bin"
+    ln -sf luajit lua
+  } >&4 2>&1
+}
+
 # build_package_luasrc() {
 #   local package_name="$1"
 
